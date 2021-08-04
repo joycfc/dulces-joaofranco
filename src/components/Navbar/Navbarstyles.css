@@ -1,0 +1,20 @@
+.color-nav {
+    background-color: crimson;
+}
+
+.enlaces {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.enlaces:hover{
+    color: yellow;
+
+}
+
+.iconos{
+    size: 40px;
+}
