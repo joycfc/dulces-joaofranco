@@ -40,7 +40,7 @@ function ItemCount({ stock, initial }) {
                     <button
                         className="btnCounter"
 
-                        // * CAPTURA EL CLICK Y ELIMINA SI EL CONTADOR ES MENOR AL STOCK RESERVADO
+                        // * CAPTURA EL CLICK Y ELIMINA SI EL CONTADOR ES MAYOR AL VALOR INICIAL
                         onClick={() => {
                             if (contador > initial) {
                                 setCounter(contador - 1);
