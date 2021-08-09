@@ -1,0 +1,67 @@
+.cardContainer {
+    height: auto;
+    width: 200px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: solid crimson 1px;
+}
+
+.plusCircle,
+.minusCircle {
+    font-size: 1.5em;
+    border: none;
+    margin: 0.2rem;
+    border-radius: 50px;
+    color: red;
+}
+
+.minusCircle:hover{
+    color: pink;
+}
+
+.plusCircle:hover{
+    color: pink;
+}
+
+
+.btnCounter {
+    border: none;
+    background-color: inherit;
+}
+.counterNumber {
+    font-size: 1em;
+    color: black;
+}
+
+.cardCounter {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.add {
+    height: auto;
+    width: 100%;
+    border-radius: 5rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: none;
+    text-align: center;
+    background-color: pink;
+    color:white;
+}
+
+.add:hover{
+background-color: crimson;
+}

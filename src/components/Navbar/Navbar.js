@@ -20,9 +20,9 @@ export const NavbarB = () => {
             />
           </a>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
+          <Navbar.Collapse 
             id="basic-navbar-nav"
-            className="justify-content-end"
+            className="justify-content-end "
           >
             <Nav className="mx-auto ">
               <a className="enlaces" href="#home">
