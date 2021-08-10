@@ -1,0 +1,26 @@
+.hero {
+    background-image: url(../../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 7em;
+    color: crimson;
+    text-align: center;
+}
+
+.subtitulo {
+    font-size: 6em;
+    text-align: justify;
+    padding: 1rem;
+    text-align: center;
+    color: red;
+}
