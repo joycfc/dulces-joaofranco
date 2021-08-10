@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //* SE CREAN LAS PROPS "STOCK" Y EL VALORINICIAL PARA SETEAR SUS VALORES"
 
 function ItemCount({ stock, initial }) {
+    
     const [contador, setCounter] = useState(initial);
 
     return (
