@@ -1,0 +1,9 @@
+.contenedorList {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

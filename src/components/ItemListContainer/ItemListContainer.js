@@ -1,28 +1,32 @@
 //* IMPORTAMOS COMPONENTES DE REACT
-import React from "react";
+import { React, useState, useEffect } from "react";
 
-//* IMPORTAMOS LOS ESTILOS DEL CONTENEDOR
+//* IMPORTAMOS EL COMPONENTE ITEMLIST PARA AGRUPAR LOS ITEMS
+import ItemList from "../ItemList/ItemList";
+
+//* IMPORTAMOS LOS ESTILOS
 import "./ItemListContainer.css";
 
-//* IMPORTAMOS EL COMPONENTE CONTADOR
-import ItemCount from "../ItemCount/ItemCount";
+//* IMPORTAMOS EL ARRAY DE LOS PRODUCTOS
+import productData from "../productos/productos.json";
 
-//* SE CREAN EL CONTENEDOR DONDE VAN A ESTAR TODOS LOS PRODUCTOS"
-
-export const ItemListContainer = (props) => {
+function ItemListContainer() {
+    // TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        setTimeout(async () => {
+            setItems(productData);
+        }, 2000);
+    });
+    
     return (
-        <div>
-            <div className="hero">
+        <div className="contenedorTxt">
 
-                <div className="contenedor">
+            <h2 className="itemTitulo">Nuestros Productos</h2>
 
-                    <h1 className="titulo">{props.saludos}</h1>
-
-                    {/* COMPONENTE CONTADOR */}
-                    <ItemCount stock={5} initial={1} />
-                    
-                </div>
-            </div>
+            <ItemList items={items} />
         </div>
     );
-};
+}
+
+export default ItemListContainer;

@@ -1,0 +1,50 @@
+[
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 1",
+        "precio": 1000,
+        "id": "001"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 2",
+        "precio": 1000,
+        "id": "002"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 3",
+        "precio": 1000,
+        "id": "003"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 4",
+        "precio": 1000,
+        "id": "004"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 5",
+        "precio": 1000,
+        "id": "005"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 6",
+        "precio": 1000,
+        "id": "006"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 7",
+        "precio": 1000,
+        "id": "007"
+    },
+    {
+        "imagen": "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
+        "titulo": "producto 8",
+        "precio": 1000,
+        "id": "008"
+    }
+]

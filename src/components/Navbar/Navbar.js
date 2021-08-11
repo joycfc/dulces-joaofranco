@@ -1,8 +1,19 @@
+//* IMPORTAMOS COMPONENTES DE REACT
 import React from "react";
+
+//* IMPORTAMOS COMPONENTES DE REACT-BOOTSTRAP
 import { Navbar, Container, Nav } from "react-bootstrap";
+
+//* IMPORTAMOS LOS ESTILOS DE BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.css";
+
+//* IMPORTAMOS LOS ESTILOS DEL NAVEGADOR
 import "./Navbarstyles.css";
+
+//* IMPORTAMOS EL LOGO
 import Logo from "../../images/logo-01.svg";
+
+//* IMPORTAMOS EL COMpONENTE WIDGET
 import { CartWidget } from "../CartWidget/CartWidget";
 
 export const NavbarB = () => {

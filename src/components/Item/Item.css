@@ -1,0 +1,26 @@
+.cardProductos {
+    height: auto;
+    width: 14rem;
+    border: solid crimson 1px;
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+.carImagen {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.cardTitulo{
+    font-size: 1em;
+    color: crimson;
+}
+
+.cardPrecio{
+    font-size: 0.8em;
+    color: purple;
+}

@@ -1,40 +1,11 @@
-.hero{
-    background-image: url(../../images/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    overflow: hidden ;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-.contenedor{
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    margin: 10%;
-    align-items: center;
-    justify-content: center;
-}
-
-.titulo{
-font-size: 62px;
-color: crimson;
-text-align: center;
-}
-
-.subtitulo{
-    font-size: 27px;
-    text-align: justify;
-    padding: 1rem;
+.contenedorTxt {
     text-align: center;
-    color: #ffcc00;
+}
+
+
+.itemTitulo {
+    font-size: 3em;
+    color: crimson;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }

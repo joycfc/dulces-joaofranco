@@ -1,23 +1,11 @@
-.cardContainer {
-    height: auto;
-    width: 200px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: solid crimson 1px;
-}
 
 .plusCircle,
 .minusCircle {
-    font-size: 1.5em;
+    font-size: 1em;
     border: none;
     margin: 0.2rem;
     border-radius: 50px;
-    color: red;
+    color: crimson;
 }
 
 .minusCircle:hover{
@@ -46,22 +34,31 @@
     padding: 0.2rem;
     margin: 0.5rem;
     text-align: center;
-    align-items: center;
-    justify-content: space-around;
+    align-items:center;
+    justify-content: space-evenly;
+
 }
 
 .add {
     height: auto;
     width: 100%;
-    border-radius: 5rem;
-    padding: 0.2rem;
-    margin: 0.2rem;
+    border-radius: 20px;
+    padding: 0.1rem;
     border: none;
     text-align: center;
     background-color: pink;
-    color:white;
+    color: crimson;
+
 }
 
 .add:hover{
 background-color: crimson;
+color:white;
+}
+
+.btnTxt{
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.5rem;
+    
 }
