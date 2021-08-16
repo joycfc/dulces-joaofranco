@@ -1,0 +1,27 @@
+.contenedorDetalles {
+    margin: 5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.detailTitulo {
+    font-size: 3em;
+    color: lightgreen;
+    padding: 2rem;
+}
+
+.detailInfo {
+    font-size: 1.5em;
+    color: palevioletred;
+    padding: 0.5rem;
+}
+
+.detailPrecio {
+    font-size: 2em;
+    color: lightgreen;
+    padding: 0.5rem;
+}

@@ -5,7 +5,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 
 //* IMPORTAMOS LOS ESTILOS
-import "./Item.css"
+import "./Item.css";
 
 function Item({ titulo, precio, imagen }) {
     return (

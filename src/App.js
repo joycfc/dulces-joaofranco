@@ -10,6 +10,8 @@ import "./components/FontAwesomeIcons/FontAwesomeIcons";
 //* IMPORTAMOS EL CONTENEDOR DONDE VAN A ESTAR TODOS LOS PRODUCTOS
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
 //** */ FUNCION APP QUE VA A CONTENER TODOS LOS COMPONENTES
 
 function App() {
@@ -20,9 +22,13 @@ function App() {
 
             {/* BANNER */}
             <HeroBanner saludos="Tienda de Dulces" />
-            {/* CONTENEDOR DE ITEMS */}
 
+            {/* CONTENEDOR DE ITEMS */}
             <ItemListContainer />
+
+            {/* CONTENEDOR DE DETALLE  DE LOS ITEMS SELECCIONADOS A MANERA DE EJEMPLO PARA QUE PUEDAN SER OBERVADOS  */}
+
+            <ItemDetailContainer />
         </>
     );
 }

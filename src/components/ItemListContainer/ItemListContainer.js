@@ -11,7 +11,7 @@ import "./ItemListContainer.css";
 import productData from "../productos/productos.json";
 
 function ItemListContainer() {
-    // TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
+    //* TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
     const [items, setItems] = useState([]);
     useEffect(() => {
         setTimeout(async () => {
