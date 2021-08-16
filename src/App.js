@@ -27,7 +27,6 @@ function App() {
             <ItemListContainer />
 
             {/* CONTENEDOR DE DETALLE  DE LOS ITEMS SELECCIONADOS A MANERA DE EJEMPLO PARA QUE PUEDAN SER OBERVADOS  */}
-
             <ItemDetailContainer />
         </>
     );
