@@ -1,10 +1,12 @@
 
 # Tienda de Dulces
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/93baceecd821483b860b38e7879dfab9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<h1>Proyecto e-commerce para el curso de React.js de la carrera de Desarrollo Front-End en Coder-House.</h1>
 
-Proyecto e-commerce para el curso de React.js de la carrera de Desarrollo Front-End en Coder-House.
+## Screenshots
 
+https://s5.gifyu.com/images/download0325a51840f7e076.gif
+<a href="https://gifyu.com/image/GLob"><img src="https://s5.gifyu.com/images/download0325a51840f7e076.gif" alt="download0325a51840f7e076.gif" border="0" /></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
