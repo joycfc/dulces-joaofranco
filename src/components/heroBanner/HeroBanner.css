@@ -9,6 +9,7 @@
     overflow: hidden;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .titulo {

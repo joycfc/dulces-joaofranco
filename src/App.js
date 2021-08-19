@@ -1,33 +1,22 @@
-//* IMPORTAMOS LA BARRA DE NAVEGACION
-import { NavbarB } from "./components/Navbar/Navbar";
-
-//* IMPORTAMOS El HERO BANNER
-import HeroBanner from "./components/heroBanner/HeroBanner";
+import React from "react";
 
 //* IMPORTAMOS LOS ICONOS DE FONT-AWESOME
 import "./components/FontAwesomeIcons/FontAwesomeIcons";
 
 //* IMPORTAMOS EL CONTENEDOR DONDE VAN A ESTAR TODOS LOS PRODUCTOS
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+// import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
+//* IMPORTAMOS EL ROUTER PARA LA NAVEGACION
+import Router from "./Router/Router";
 
 //** */ FUNCION APP QUE VA A CONTENER TODOS LOS COMPONENTES
 
 function App() {
     return (
         <>
-            {/* *BARRA DE NAVEGACION */}
-            <NavbarB />
-
-            {/* BANNER */}
-            <HeroBanner saludos="Tienda de Dulces" />
-
-            {/* CONTENEDOR DE ITEMS */}
-            <ItemListContainer />
-
-            {/* CONTENEDOR DE DETALLE  DE LOS ITEMS SELECCIONADOS A MANERA DE EJEMPLO PARA QUE PUEDAN SER OBERVADOS  */}
-            <ItemDetailContainer />
+            <Router />
         </>
     );
 }

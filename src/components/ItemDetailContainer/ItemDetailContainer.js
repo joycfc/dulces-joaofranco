@@ -7,34 +7,36 @@ import ItemDetail from "../itemDetail/ItemDetail";
 //* IMPORTAMOS LOS ESTILOS
 import "./ItemDetailContainer.css";
 
+//* IMPORTAMOS LOS PRODUCTOS
+import { Productos } from "../productos/Productos";
+
+import { useParams } from "react-router-dom";
+
+
+
+
 // *CREAMOS EL CONTENEDOR
 function ItemDetailContainer() {
-
+    
     // *DEFINIMOS LAS VARIABLES
     const [item, setItem] = useState([]);
 
-    // *HACEMOS UN LLAMADO ASYNC PARA SIMULAR UN DELAY
-    const getItem = async () => {
-        setTimeout(async () => {
-            setItem({
-                
-                // *SETEAMOS LOS ITEMS
-                id: 0,
-                titulo: "Item Detail",
-                precio: 1000,
-                info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro maiores quis omnis, totam autem tenetur dolor in consectetur laudantium.",
-                imagen: "http://fpoimg.com/250x300?text=aqui va una imagen&bg_color=ff706b&text_color=ffffff",
-            });
-        }, 2000);
+    // *TOMAMOS EL ID DEL PRODUCTO
+
+    const { productoId } = useParams();
+
+    const getItem = (productoId) => {
+        const Unidad = Productos.find((element) => element.id == productoId);
+        setItem(Unidad);
     };
 
     useEffect(() => {
-        getItem();
+        getItem(productoId);
     }, []);
 
     return (
         <div className="contenedorDetalles">
-            <ItemDetail item={item} />;
+            <ItemDetail item={item} />
         </div>
     );
 }

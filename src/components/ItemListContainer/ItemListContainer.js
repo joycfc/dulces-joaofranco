@@ -7,21 +7,28 @@ import ItemList from "../ItemList/ItemList";
 //* IMPORTAMOS LOS ESTILOS
 import "./ItemListContainer.css";
 
-//* IMPORTAMOS EL ARRAY DE LOS PRODUCTOS
-import productData from "../productos/productos.json";
+//* IMPORTAMOS LOS PRODUCTOS
+import { ProductData } from "../../helpers/Promesa";
 
 function ItemListContainer() {
     //* TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
     const [items, setItems] = useState([]);
+
     useEffect(() => {
-        setTimeout(async () => {
-            setItems(productData);
-        }, 2000);
-    });
-    
+        getProductData();
+    }, []);
+
+    const getProductData = async () => {
+        try {
+            const res = await ProductData();
+            setItems(res);
+        } catch (err) {
+            console.log("Error", err);
+        }
+    };
+
     return (
         <div className="contenedorTxt">
-
             <h2 className="itemTitulo">Nuestros Productos</h2>
 
             <ItemList items={items} />

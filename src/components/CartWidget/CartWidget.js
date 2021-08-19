@@ -10,7 +10,7 @@ export const CartWidget = () => {
                     className="ShoppingBasket"
                     icon="shopping-basket"
                 />
-            </a>{" "}
+            </a>
         </div>
     );
 };

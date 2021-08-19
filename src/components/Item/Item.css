@@ -24,3 +24,29 @@
     font-size: 0.8em;
     color: purple;
 }
+
+
+.nfo {
+    height: auto;
+    width: 30%;
+    border-radius: 20px;
+    padding: 0.3rem;
+    border: none!important;
+    text-align: center;
+    background-color: pink !important;
+    color: crimson;
+    margin: 0.2rem;
+
+}
+
+.add:hover{
+background-color: crimson;
+color:white;
+}
+
+.btnTxt{
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.5rem;
+    
+}

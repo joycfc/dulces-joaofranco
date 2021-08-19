@@ -10,6 +10,9 @@ import "./ItemDetail.css";
 //* CREAMOS EL COMPONENTE ITEM DETAIL QUE NOS DARA EL DETALLE DEL PRODUCTO CON TODAS SUS PROPIEDADES 
 
 function ItemDetail({ item }) {
+
+
+    
     return (
         <>
             <div className="CardDetalle">

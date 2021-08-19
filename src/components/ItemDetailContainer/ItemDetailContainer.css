@@ -1,11 +1,13 @@
 .contenedorDetalles {
-    margin: 5rem;
+    margin: 1rem;
     padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     justify-items: center;
+    height: auto;
+    width: 100%;
 }
 
 .detailTitulo {
