@@ -1,4 +1,7 @@
+//* IMPORTAMOS COMPONENTES DE REACT
 import React from "react";
+
+//* IMPORTAMOS COMPONENTES DEL BANNER
 import "./HeroBanner.css";
 
 const HeroBanner = () => {

@@ -1,5 +1,6 @@
 //* IMPORTAMOS COMPONENTES DE REACT
-import React from "react";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 //* IMPORTAMOS LOS ESTILOS DEL CONTADOR
 import "./ItemList.css";
@@ -9,28 +10,30 @@ import Item from "../Item/Item";
 
 // *  ITERAMOS LOS PRODUCTOS PARA PINTARLOS EN EN CONTENEDOR
 
-function ItemList({ items }) {
-    function itemProp({ id, precio, titulo, imagen, category }, index) {
-        return (
-            <div>
-                <div>
-                    <Item
-                        id={id}
-                        titulo={titulo}
-                        precio={precio}
-                        imagen={imagen}
-                        key={index}
-                        categoria={category}
-                    />
-                </div>
-            </div>
-        );
-    }
+function agregarItems({ id, titulo, precio, imagen, category, stock }, index) {
+    return (
+        <div>
+            <Item
+                id={id}
+                titulo={titulo}
+                precio={precio}
+                imagen={imagen}
+                key={index}
+                categoria={category}
+                stock={stock}
+            />
+        </div>
+    );
+}
 
+function ItemList({ items }) {
+    useEffect(() => {
+        localStorage.setItem("items", JSON.stringify(items));
+    }, [items]);
 
     return (
         <>
-            <div className="contenedorList">{items.map(itemProp)}</div>
+            <div className="contenedorList">{items.map(agregarItems)}</div>
         </>
     );
 }

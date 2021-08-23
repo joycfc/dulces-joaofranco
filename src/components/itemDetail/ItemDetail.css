@@ -1,24 +1,56 @@
-.CardDetalle{
+.CardDetalle {
     height: auto;
     width: 90%;
     border: solid crimson 1px;
     margin: 1rem;
     border-radius: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .detalleImagen {
     height: auto;
-    width: 100%;
+    width: 50%;
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
     padding: 0.5rem;
 }
 
-.cardDetalle{
+.cardTexto {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     text-align: center;
+    justify-content: center;
+}
+
+.detailTitulo {
+    font-size: 2em;
+    color: lightgreen;
+    padding: 2rem;
+}
+
+.detailInfo {
+    font-size: 1em;
+    color: palevioletred;
+    padding: 0.5rem;
+}
+
+.detailPrecio {
+    font-size: 1.5em;
+    color: lightgreen;
+    padding: 0.5rem;
+}
+
+.btnTerminar {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.1rem;
+    border: none;
+    text-align: center;
+    background-color: crimson;
+    color: white;
 }

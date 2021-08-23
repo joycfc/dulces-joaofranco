@@ -8,19 +8,20 @@ import "./ItemCount.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //* SE CREAN LAS PROPS "STOCK" Y EL VALORINICIAL PARA SETEAR SUS VALORES"
-function ItemCount({ stock, initial }) {
-    const [contador, setCounter] = useState(initial);
+function ItemCount({ stock, initial, onAdd }) {
+
+    const [counter, setCounter] = useState(initial);
 
     // SE CREAN LAS FUNCIONES DE LOS BOTONES
     function incrementar() {
-        if (contador < stock) {
-            setCounter(contador + 1);
+        if (counter < stock) {
+            setCounter(counter + 1);
         }
     }
 
     function decrementar() {
-        if (contador > initial) {
-            setCounter(contador - 1);
+        if (counter > initial) {
+            setCounter(counter - 1);
         }
     }
 
@@ -38,7 +39,7 @@ function ItemCount({ stock, initial }) {
                     />
                 </button>
                 {/* // VALOR DEL CONTADOR */}
-                <p className="counterNumber"> {contador} </p>
+                <p className="counterNumber"> {counter} </p>
                 <button
                     className="btnCounter"
                     // * CAPTURA EL CLICK Y ACTIVA LA FUNCION DECREMENTAR
@@ -51,8 +52,8 @@ function ItemCount({ stock, initial }) {
                 </button>{" "}
             </div>
             <div className="cardCounter">
-                <button className="add">
-                    <p className="btnTxt"> Agregar al carrito </p>{" "}
+                <button className="add" onClick={() => onAdd(counter)}>
+                    Agregar al carrito 
                 </button>{" "}
             </div>{" "}
         </>
