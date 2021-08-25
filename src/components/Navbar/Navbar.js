@@ -1,7 +1,6 @@
 //* IMPORTAMOS COMPONENTES DE REACT
 import React from "react";
 
-//* IMPORTAMOS COMPONENTES DE REACT-BOOTSTRAP
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 //* IMPORTAMOS LOS ESTILOS DE BOOTSTRAP
@@ -16,7 +15,6 @@ import Logo from "../../images/logo-01.svg";
 //* IMPORTAMOS EL COMPONENTE WIDGET
 import { CartWidget } from "../CartWidget/CartWidget";
 
-//* IMPORTAMOS EL COMPONENTE LINK PARA LOS ENLACES
 import { Link } from "react-router-dom";
 
 export const NavbarB = () => {

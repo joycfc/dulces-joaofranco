@@ -4,5 +4,9 @@
     text-decoration: none;
     cursor: pointer;
     padding: 1rem;
+}
+
+.iconito {
     color: white !important;
+    margin-right: 30px;
 }

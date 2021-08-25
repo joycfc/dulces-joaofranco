@@ -1,8 +1,10 @@
-import React from "react"
-import { createContext, useState } from "react";
+//* IMPORTAMOS COMPONENTES DE REACT
+import React, { createContext, useState } from "react";
 
+//* EXPORTAMOS EL CARTCONTEXT PARA USARLO EN EL ITEMDETAIL
 export const CartContext = createContext([]);
 
+//* EXPORTAMOS EL CartProvider PARA USARLO EN APP
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
