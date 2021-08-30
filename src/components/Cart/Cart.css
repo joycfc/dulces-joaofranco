@@ -1,0 +1,53 @@
+.thumbnail {
+    height: auto;
+    width: 200px;
+}
+
+th {
+    text-align: center;
+    border: #adff2f solid 1px;
+   
+}
+
+td {
+    height: auto;
+    border: blue solid 1px;
+    padding: 10px 50px;
+    text-align: center;
+    margin: 0PX;
+}
+
+
+.contenedorTabla {
+    height: auto;
+    width: 90%;
+}
+
+.containerCart {
+    display: flex;
+    height: auto;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+}
+
+.retorno {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background-color: pink;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.retorno:hover {
+    background-color: crimson;
+}

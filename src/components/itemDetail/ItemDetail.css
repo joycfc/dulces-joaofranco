@@ -51,6 +51,28 @@
     padding: 0.1rem;
     border: none;
     text-align: center;
-    background-color: crimson;
-    color: white;
+    background-color: greenyellow;
+    color: crimson;
+    padding: 1rem;
+}
+
+.btnSeguir {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background-color: pink;
+    border: none;
+    margin: 20px auto ;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
 }

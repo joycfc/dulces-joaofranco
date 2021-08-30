@@ -13,12 +13,9 @@ import ItemCount from "../ItemCount/ItemCount";
 //* IMPORTAMOS EL CARD CONTEXT
 import { CartContext } from "../../context/CartContext";
 
-
-
 //* IMPORTAMOS LOS ESTILOS
 import "./ItemDetail.css";
 const ItemDetail = ({ item }) => {
-
     const { id, titulo, precio, imagen, info, stock } = item;
 
     const quantityInitial = 0;
@@ -36,7 +33,7 @@ const ItemDetail = ({ item }) => {
     return (
         <div className="CardDetalle" id={`detail-product-${id}`}>
             <img className="detalleImagen" src={item.imagen} />
-            <Card.Body>
+            <Card.Body className="cardBody">
                 <h3 className="detailTitulo">{item.titulo}</h3>
                 <p className="detailInfo">{item.info}</p>
                 <p className="detailPrecio">${item.precio}</p>
@@ -49,6 +46,9 @@ const ItemDetail = ({ item }) => {
                 ) : (
                     <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 )}
+                <Link to="/ItemListContainer">
+                    <button className="btnSeguir">seguir Comprando </button>
+                </Link>
             </Card.Body>
         </div>
     );

@@ -8,29 +8,73 @@ export const CartContext = createContext([]);
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
+    const cartNumber = () =>
+        cart.reduce((actual, current) => actual + current.quantity, 0);
+
     const clearCart = () => {
         setCart([]);
     };
 
-    const isInCart = id => cart.some(element => element.id === id);
+    const getItem = (id) => cart.find((element) => element.item.id === id);
 
-    const addToCart = (item, quantity) => {
-        if (isInCart(item.id)) {
-            const cartMapped = cart.map(element => {
-                return { ...element, quantity: element.quantity + quantity };
-            });
-            setCart(cartMapped);
-            console.log("Cart mapeado", cartMapped)
+    const subTotal = (id, ammount) => {
+        if (getItem(id).quantity > ammount) {
+            setCart(
+                cart.map((element) => {
+                    if (element.item.id === id) element.quantity -= ammount;
+                    return element;
+                })
+            );
         } else {
-            setCart([...cart, { ...item, quantity }]);
+            removeFromCart(id);
         }
     };
 
-    console.log("Cart", cart)
+    const total = (id, qua, stock) => {
+        if (qua <= stock) {
+            setCart(
+                cart.map((element) => {
+                    if (element.item.id === id)
+                        element.quantity = element.quantity + 1;
+                    return element;
+                })
+            );
+        }
+    };
+
+    const removeFromCart = (id) => {
+        setCart(cart.filter((element) => element.item.id !== id));
+    };
+
+    const addToCart = (item, quantity) => {
+        const isInCart = (id) => cart.some((element) => element.item.id === id);
+        if (isInCart(item.id)) {
+            setCart(
+                cart.map((element) => {
+                    if (element.item.id === item.id)
+                        element.quantity = element.quantity + quantity;
+                    return element;
+                })
+            );
+        } else {
+            setCart([...cart, { item, quantity }]);
+        }
+    };
 
     return (
-        <CartContext.Provider value={{ cart, setCart, clearCart, addToCart }} >
+        <CartContext.Provider
+            value={{
+                cart,
+                setCart,
+                clearCart,
+                addToCart,
+                cartNumber,
+                total,
+                subTotal,
+                removeFromCart,
+            }}
+        >
             {children}
         </CartContext.Provider>
-    )
-}
+    );
+};

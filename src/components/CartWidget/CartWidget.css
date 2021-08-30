@@ -10,3 +10,21 @@
     color: white !important;
     margin-right: 30px;
 }
+
+.iconito:hover{
+    color: yellow;
+    border: yellow solid 1px;
+    padding: 3px
+}
+
+.total{
+    font-size: 1.5em;
+    color: yellow;
+    position: relative;
+    left: -33px;
+    top: -10px;
+}
+
+.contenedorCart{
+    border: solid green 1px;
+}

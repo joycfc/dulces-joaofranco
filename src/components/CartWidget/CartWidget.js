@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./CartWidget.css";
+import { CartContext } from "../../context/CartContext";
 
 export const CartWidget = () => {
+    const { cart, cartNumber } = useContext(CartContext);
+
     return (
-        <Link to="/cart">
-            <FontAwesomeIcon
-                className="ShoppingBasket iconito"
-                icon="shopping-basket"
-            />
-        </Link>
+        cart.length === 0 || (
+            <div>
+                <Link to="/cart">
+                    <div className="contenedorCart">
+                        <FontAwesomeIcon
+                            className="ShoppingBasket iconito"
+                            icon="shopping-basket"
+                        />
+                        <span className="total">{cartNumber()}</span>
+                        
+                    </div>
+                </Link>
+            </div>
+        )
     );
 };

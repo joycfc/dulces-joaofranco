@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //* SE CREAN LAS PROPS "STOCK" Y EL VALORINICIAL PARA SETEAR SUS VALORES"
 function ItemCount({ stock, initial, onAdd }) {
-
     const [counter, setCounter] = useState(initial);
 
     // SE CREAN LAS FUNCIONES DE LOS BOTONES
@@ -28,18 +27,7 @@ function ItemCount({ stock, initial, onAdd }) {
     return (
         <>
             <div className="cardCounter">
-                <button
-                    className="btnCounter"
-                    // * CAPTURA EL CLICK Y ACTIVA LA FUNCION INCREMENTAR
-                    onClick={incrementar}
-                >
-                    <FontAwesomeIcon
-                        className="plusCircle"
-                        icon="plus-circle"
-                    />
-                </button>
                 {/* // VALOR DEL CONTADOR */}
-                <p className="counterNumber"> {counter} </p>
                 <button
                     className="btnCounter"
                     // * CAPTURA EL CLICK Y ACTIVA LA FUNCION DECREMENTAR
@@ -50,12 +38,24 @@ function ItemCount({ stock, initial, onAdd }) {
                         icon="minus-circle"
                     />
                 </button>{" "}
+                <p className="counterNumber"> {counter} </p>
+                <button
+                    className="btnCounter"
+                    // * CAPTURA EL CLICK Y ACTIVA LA FUNCION INCREMENTAR
+                    onClick={incrementar}
+                >
+                    <FontAwesomeIcon
+                        className="plusCircle"
+                        icon="plus-circle"
+                    />
+                </button>
             </div>
             <div className="cardCounter">
                 <button className="add" onClick={() => onAdd(counter)}>
-                    Agregar al carrito 
+                    Agregar al carrito
                 </button>{" "}
             </div>{" "}
+            
         </>
     );
 }

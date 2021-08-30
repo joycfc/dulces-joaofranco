@@ -43,11 +43,12 @@
     height: auto;
     width: 100%;
     border-radius: 20px;
-    padding: 0.1rem;
-    border: none;
-    text-align: center;
     background-color: pink;
-    color: crimson;
+    border: none;
+    margin: 20px auto ;
+    text-align: center;
+    padding: 1rem;
+    background-color: crimson;
 
 }
 

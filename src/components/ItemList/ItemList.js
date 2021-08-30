@@ -19,7 +19,7 @@ function agregarItems({ id, titulo, precio, imagen, category, stock }, index) {
                 precio={precio}
                 imagen={imagen}
                 key={index}
-                categoria={category}
+                category={category}
                 stock={stock}
             />
         </div>
@@ -31,6 +31,8 @@ function ItemList({ items }) {
         localStorage.setItem("items", JSON.stringify(items));
     }, [items]);
 
+
+    
     return (
         <>
             <div className="contenedorList">{items.map(agregarItems)}</div>
