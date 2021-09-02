@@ -52,7 +52,7 @@ function ItemCount({ stock, initial, onAdd }) {
             </div>
             <div className="cardCounter">
                 <button className="add" onClick={() => onAdd(counter)}>
-                    Agregar al carrito
+                    Agregar al Carrito
                 </button>{" "}
             </div>{" "}
             

@@ -7,31 +7,51 @@ import ItemList from "../ItemList/ItemList";
 //* IMPORTAMOS LOS ESTILOS
 import "./ItemListContainer.css";
 
-//* IMPORTAMOS LOS PRODUCTOS
-import { ProductData } from "../../helpers/Promesa";
+import { listCallback } from "../../components/productos/Productos"
+import {getFirestore} from "../../firebase/index"
 
-function ItemListContainer() {
-    //* TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
+//* IMPORTAMOS LOS PRODUCTOS
+// import { ProductData } from "../../helpers/Promesa";
+
+// function ItemListContainer() {
+//     //* TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
+//     const [items, setItems] = useState([]);
+
+//     useEffect(() => {
+//         getProductData();
+//     }, []);
+
+//     const getProductData = async () => {
+//         try {
+//             const res = await ProductData();
+//             setItems(res);
+//         } catch (err) {
+//             console.log("Error", err);
+//         }
+//     };
+
+function ItemListContainer(props) {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        getProductData();
+        getFirestore()
+            .collection("items")
+            .get()
+            .then((res) => {
+                const items = listCallback(res);
+                console.log(items);
+                setItems(items);
+            });
     }, []);
 
-    const getProductData = async () => {
-        try {
-            const res = await ProductData();
-            setItems(res);
-        } catch (err) {
-            console.log("Error", err);
-        }
-    };
 
     return (
         <div className="contenedorTxt">
             <h2 className="itemTitulo">Nuestros Productos</h2>
+            <div className="contenedorList">
 
             <ItemList items={items} />
+            </div>
         </div>
     );
 }

@@ -4,23 +4,40 @@
 }
 
 .enlaces {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 1rem;
+    font-size: 1.2em;
 }
 
+.enlacesDrop{
+    color: crimson;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.enlacesDrop:hover{
+    color: yellow;
+
+}
 .enlaces:hover{
     color: yellow;
 
 }
 
 .iconos{
-    size: 40px;
+    size: 50px;
 }
 
 .logo{
     margin-left: 30px;
 }
 
+#navbarScrollingDropdown{
+    color: white;
+    padding-top: 24px;
+    background-color: crimson;
+    font-size: 1.2em;
+}
+
+#navbarScrollingDropdown:hover{
+    color: yellow;
+
+}

@@ -11,7 +11,7 @@ export const CartWidget = () => {
         cart.length === 0 || (
             <div>
                 <Link to="/cart">
-                    <div className="contenedorCart">
+                    <div>
                         <FontAwesomeIcon
                             className="ShoppingBasket iconito"
                             icon="shopping-basket"

@@ -3,24 +3,24 @@
     width: 200px;
 }
 
+
 th {
     text-align: center;
-    border: #adff2f solid 1px;
-   
+    font-size: 2em;
+    color: crimson;
 }
 
 td {
     height: auto;
-    border: blue solid 1px;
     padding: 10px 50px;
     text-align: center;
-    margin: 0PX;
+    margin: 0px;
 }
-
 
 .contenedorTabla {
     height: auto;
     width: 90%;
+   
 }
 
 .containerCart {
@@ -30,6 +30,7 @@ td {
     justify-content: center;
     margin: auto;
     padding-top: 100px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -46,8 +47,62 @@ button {
     margin: 20px auto;
     text-align: center;
     padding: 1rem;
+    color: crimson;
+
 }
 
 .retorno:hover {
     background-color: crimson;
+}
+
+.btnSeguir {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background-color: pink;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btnSeguir:hover {
+    color: white;
+    background-color: crimson;
+}
+
+.vaciar{
+    color: white;
+    background-color: crimson;
+    border: none;
+}
+
+.vaciar:hover{
+    color: crimson;
+    background-color: yellow;
+}
+
+.item{
+    font-size: 1.5em;
+    color: crimson;
+}
+
+h4{
+    color:crimson
+}
+
+.btnProducto{
+    color: crimson;
+    background-color: yellow;
+    border: none;
+    margin: 2px;
+}
+
+.btnProducto:hover{
+    background-color: greenyellow;
+    color: crimson;
+}
+
+.total{
+    color: greenyellows;
 }

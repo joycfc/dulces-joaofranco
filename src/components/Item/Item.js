@@ -11,13 +11,13 @@ import "./Item.css";
 
 import { Link } from "react-router-dom";
 
-function Item({ titulo, precio, imagen, id }) {
+function Item({ title, price, image, id }) {
     return (
         <div className="cardProductos">
-            <img className="carImagen" src={imagen} />
+            <img className="carImagen" src={image} />
             <div>
-                <h3 className="cardTitulo">{titulo}</h3>
-                <p className="cardPrecio">${precio}</p>
+                <h3 className="cardTitulo">{title}</h3>
+                <p className="cardPrecio">${price}</p>
             </div>
             <Link to={`/item/${id}`}>
                 <Button className="nfo">info</Button>

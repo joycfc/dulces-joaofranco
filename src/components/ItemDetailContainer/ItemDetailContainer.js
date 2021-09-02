@@ -12,33 +12,53 @@ import { Productos } from "../productos/Productos";
 
 import { useParams } from "react-router-dom";
 
+import { getProductById } from "../productos/Productos";
 
+// // *CREAMOS EL CONTENEDOR
+// function ItemDetailContainer() {
 
+//     // *DEFINIMOS LAS VARIABLES
+//     const [item, setItem] = useState([]);
 
-// *CREAMOS EL CONTENEDOR
+//     // *TOMAMOS EL ID DEL PRODUCTO
+
+//     const { productoId } = useParams();
+
+//     const getItem = (productoId) => {
+//         const Unidad = Productos.find((element) => element.id == productoId);
+//         setItem(Unidad);
+//     };
+
+//     useEffect(() => {
+//         getItem(productoId);
+//     }, []);
+
+//     return (
+//         <div className="contenedorDetalles">
+//             <ItemDetail item={item} />
+//         </div>
+//     );
+// }
+
+// export default ItemDetailContainer;
+
 function ItemDetailContainer() {
-    
-    // *DEFINIMOS LAS VARIABLES
-    const [item, setItem] = useState([]);
-
-    // *TOMAMOS EL ID DEL PRODUCTO
-
-    const { productoId } = useParams();
-
-    const getItem = (productoId) => {
-        const Unidad = Productos.find((element) => element.id == productoId);
-        setItem(Unidad);
-    };
+    const [item, setItem] = useState({});
+    const { itemId } = useParams();
 
     useEffect(() => {
-        getItem(productoId);
-    }, []);
+        getProductById(itemId).then((res) => {
+            setItem({ id: res.id, ...res.data() });
+        });
+    }, [itemId]);
 
-    return (
-        <div className="contenedorDetalles">
-            <ItemDetail item={item} />
-        </div>
-    );
+    return <ItemDetail  item={item} />;
+    // return (
+    //   <>
+    //     {loading && <h1>Cargando...</h1>}
+    //     {!loading && <ItemDetail className="" item={item} />}
+    //   </>
+    // );
 }
 
 export default ItemDetailContainer;
