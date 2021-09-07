@@ -122,6 +122,11 @@ const Cart = () => {
                                         Seguir Comprando{" "}
                                     </button>
                                 </Link>
+                                <Link to="/Checkout">
+                                    <button className="btnFinalizar">
+                                        finalizar Compra{" "}
+                                    </button>
+                                </Link>
                             </div>
                         </td>
                     </tr>

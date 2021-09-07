@@ -8,27 +8,8 @@ import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
 import { listCallback } from "../../components/productos/Productos"
+
 import {getFirestore} from "../../firebase/index"
-
-//* IMPORTAMOS LOS PRODUCTOS
-// import { ProductData } from "../../helpers/Promesa";
-
-// function ItemListContainer() {
-//     //* TOMAMOS LOS ELEMENTOS PARA CREAR UNA PROMISE HACIENDO EL MOCK DE SERVIDOR
-//     const [items, setItems] = useState([]);
-
-//     useEffect(() => {
-//         getProductData();
-//     }, []);
-
-//     const getProductData = async () => {
-//         try {
-//             const res = await ProductData();
-//             setItems(res);
-//         } catch (err) {
-//             console.log("Error", err);
-//         }
-//     };
 
 function ItemListContainer(props) {
     const [items, setItems] = useState([]);

@@ -3,7 +3,6 @@
     width: 200px;
 }
 
-
 th {
     text-align: center;
     font-size: 2em;
@@ -20,7 +19,6 @@ td {
 .contenedorTabla {
     height: auto;
     width: 90%;
-   
 }
 
 .containerCart {
@@ -48,7 +46,6 @@ button {
     text-align: center;
     padding: 1rem;
     color: crimson;
-
 }
 
 .retorno:hover {
@@ -71,38 +68,54 @@ button {
     background-color: crimson;
 }
 
-.vaciar{
+.vaciar {
     color: white;
     background-color: crimson;
     border: none;
 }
 
-.vaciar:hover{
+.vaciar:hover {
     color: crimson;
     background-color: yellow;
 }
 
-.item{
+.item {
     font-size: 1.5em;
     color: crimson;
 }
 
-h4{
-    color:crimson
+h4 {
+    color: crimson;
 }
 
-.btnProducto{
+.btnProducto {
     color: crimson;
     background-color: yellow;
     border: none;
     margin: 2px;
 }
 
-.btnProducto:hover{
+.btnProducto:hover {
     background-color: greenyellow;
     color: crimson;
 }
 
-.total{
+.total {
     color: greenyellows;
+}
+
+.btnFinalizar{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background-color: greenyellow;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btnFinalizar:hover {
+    color: crimson;
+    background-color: yellow;
 }

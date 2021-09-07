@@ -1,14 +1,13 @@
 //* IMPORTAMOS COMPONENTES DE REACT
 import React from "react";
 
-// //* IMPORTAMOS EL COMPONENTE CONTADOR
-// import ItemCount from "../ItemCount/ItemCount";
-
+//* IMPORTAMOS BOTONES DE REACT BOOTSTRAP
 import { Button } from "react-bootstrap";
 
 //* IMPORTAMOS LOS ESTILOS
 import "./Item.css";
 
+//* IMPORTAMOS LOS COMPONENTES LINK DE REACT-ROUTER
 import { Link } from "react-router-dom";
 
 function Item({ title, price, image, id }) {

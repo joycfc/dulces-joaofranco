@@ -30,8 +30,8 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    const total = (id, qua, stock) => {
-        if (qua <= stock) {
+    const total = (id, qty, stock) => {
+        if (qty <= stock) {
             setCart(
                 cart.map((element) => {
                     if (element.item.id === id)
@@ -60,6 +60,8 @@ export const CartProvider = ({ children }) => {
             setCart([...cart, { item, quantity }]);
         }
     };
+
+    //* EXPORTAMOS LAS FUNCIONES QUE VAMOS A USAR
 
     return (
         <CartContext.Provider

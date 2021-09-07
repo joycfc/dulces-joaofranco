@@ -1,0 +1,58 @@
+.tituloForma{
+    text-align: center;
+    margin: 3rem;
+    font-size: 3em;
+}
+.contenedorForma {
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    border: crimson solid 1px;
+    border-radius: 20px;
+}
+
+h1 {
+    color: crimson;
+}
+
+form{
+    margin: 5px;
+    padding: 10px;
+}
+
+.labels{
+    font-size: 1.5em;
+    color: crimson;
+}
+
+.btnCheckout{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background-color: greenyellow;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 1rem;
+    color: crimson;
+}
+
+.btnCheckout:hover {
+    color: crimson;
+    background-color: yellow;
+}
+
+.btnBack{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    background-color: crimson;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}

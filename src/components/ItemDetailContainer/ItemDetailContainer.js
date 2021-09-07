@@ -8,39 +8,11 @@ import ItemDetail from "../itemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 
 //* IMPORTAMOS LOS PRODUCTOS
-import { Productos } from "../productos/Productos";
 
 import { useParams } from "react-router-dom";
 
 import { getProductById } from "../productos/Productos";
 
-// // *CREAMOS EL CONTENEDOR
-// function ItemDetailContainer() {
-
-//     // *DEFINIMOS LAS VARIABLES
-//     const [item, setItem] = useState([]);
-
-//     // *TOMAMOS EL ID DEL PRODUCTO
-
-//     const { productoId } = useParams();
-
-//     const getItem = (productoId) => {
-//         const Unidad = Productos.find((element) => element.id == productoId);
-//         setItem(Unidad);
-//     };
-
-//     useEffect(() => {
-//         getItem(productoId);
-//     }, []);
-
-//     return (
-//         <div className="contenedorDetalles">
-//             <ItemDetail item={item} />
-//         </div>
-//     );
-// }
-
-// export default ItemDetailContainer;
 
 function ItemDetailContainer() {
     const [item, setItem] = useState({});
@@ -53,12 +25,7 @@ function ItemDetailContainer() {
     }, [itemId]);
 
     return <ItemDetail  item={item} />;
-    // return (
-    //   <>
-    //     {loading && <h1>Cargando...</h1>}
-    //     {!loading && <ItemDetail className="" item={item} />}
-    //   </>
-    // );
+    
 }
 
 export default ItemDetailContainer;
