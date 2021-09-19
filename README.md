@@ -48,4 +48,4 @@ En el archivo `.env` estan las variables que deben ir para poder llenarlas con s
 
 ## VIDEO
 
-Hacé click [ACA](https://www.youtube.com/watch?v=6-zm3eOkLoc) para ver un video de demostración del proceso de compra de la app.
+(https://www.loom.com/share/a90237cdd9a3423ab9c65a7b73a73fc8) demostración del proceso de compra de la app.
