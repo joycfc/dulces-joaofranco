@@ -1,5 +1,5 @@
 .color-nav {
-    background-color: crimson;
+    background-color: #000033;
     height: 10vh;
 }
 
@@ -7,37 +7,45 @@
     font-size: 1.2em;
 }
 
-.enlacesDrop{
-    color: crimson;
+.enlacesDrop {
+    color: #ff9999;
     font-size: 1.2em;
     text-align: center;
 }
 
-.enlacesDrop:hover{
-    color: yellow;
-
+.enlacesDrop:hover {
+    color: #000033;
 }
-.enlaces:hover{
-    color: yellow;
-
+.enlaces:hover {
+    color: #ff9999;
 }
 
-.iconos{
+.iconos {
     size: 50px;
 }
 
-.logo{
+.logo {
+    height: 3em;
     margin-left: 30px;
 }
 
-#navbarScrollingDropdown{
+#navbarScrollingDropdown {
     color: white;
-    padding-top: 24px;
-    background-color: crimson;
+    padding-top: 1.5rem;
     font-size: 1.2em;
 }
 
-#navbarScrollingDropdown:hover{
-    color: yellow;
+#navbarScrollingDropdown:hover {
+    color: #ff9999;
+}
 
+.dropdown-menu {
+    background-color: #000033;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    top: 0;
 }

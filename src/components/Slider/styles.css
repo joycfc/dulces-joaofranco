@@ -1,0 +1,56 @@
+
+
+/* barra de navegacion */
+
+.color-nav {
+    background-color: #000033;
+    height: 10vh;
+}
+
+.enlaces {
+    font-size: 1.2em;
+}
+
+.enlacesDrop{
+    color: crimson;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.enlacesDrop:hover{
+    color: #ff9999;
+
+}
+.enlaces:hover{
+    color: #ff9999;
+
+}
+
+.iconos{
+    size: 50px;
+}
+
+.logo{
+    height: 3em;
+    margin-left: 30px;
+}
+
+#navbarScrollingDropdown{
+    color: white;
+    padding-top: 24px;
+    background-color: crimson;
+    font-size: 1.2em;
+}
+
+#navbarScrollingDropdown:hover{
+    color: yellow;
+
+}
+
+/* botones */
+
+.btnMas{}
+
+.btnAdd{}
+
+.btnFinish{}

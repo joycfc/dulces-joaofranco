@@ -116,7 +116,7 @@ const Cart = () => {
                     </tr>
                     <tr>
                         <td>
-                            <div>
+                            <div className="contenedorBtn">
                                 <Link to="/ItemListContainer">
                                     <button className="btnSeguir">
                                         Seguir Comprando{" "}

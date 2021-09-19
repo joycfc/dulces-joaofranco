@@ -1,42 +1,29 @@
-//* IMPORTAMOS COMPONENTES DE REACT
-import React, { useState, useContext } from "react";
-
-//* IMPORTAMOS LOS ESTILOS
-import "./Checkout.css";
-
-//* IMPORTAMOS FORMULARIO DE REACT BOOTSTRAP
+import { Button, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { useContext } from "react";
 import { Form } from "react-bootstrap";
-
-//* IMPORTAMOS LAS FUNCIONES DEL CARTCONTEXT
 import { CartContext } from "../../context/CartContext";
-
-//* IMPORTAMOS EL API DE FIREBASE
-import { getFirestore } from "../../firebase/index";
+import { getFirestore } from "../../firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
+import { useHistory } from "react-router-dom";
+import "./Checkout.css";
 
-//* IMPORTAMOS LOS COMPONENTES LINK DE REACT-ROUTER
-import { Link } from "react-router-dom";
-
-//** */ EXPORTAMOS EL COMPONENTE CHECKOUT
 const Checkout = () => {
-    const { cart, cartNumber } = useContext(CartContext);
-
+    const { cart, setCart, calcTotal } = useContext(CartContext);
     const [customerInfo, setCustomerInfo] = useState({
         name: null,
         lastname: null,
         email: null,
         phone: null,
     });
-
-    //* DEFINIMOS LAS VARIABLES QUE VAMOS A NECESITAR DEL USUARIO
-    const { name, lastname, email, phone } = customerInfo;
-
     const [order, setOrder] = useState(false);
 
+    const { name, lastname, email, phone } = customerInfo;
     const required = !(name && lastname && email && phone);
 
-    //* CAPTURAMOS ELOS EVENTOS DEL FORMULARIO
+    const history = useHistory();
+
     const handleChange = (event) => {
         setCustomerInfo({
             ...customerInfo,
@@ -44,8 +31,8 @@ const Checkout = () => {
         });
     };
 
-    //* DEFINIMOS LA FUNCION PARA TERMINAR LA COMPRA Y ENVIAR LOS DATOS
     const handleFinishPurchase = () => {
+        setOrder(true);
         const db = getFirestore();
         const orders = db.collection("orders");
         const batch = db.batch();
@@ -59,7 +46,6 @@ const Checkout = () => {
             quantity,
         }));
 
-        //* CREAMOS LA NUEVA ORDEN
         const newOrder = {
             buyer: {
                 name,
@@ -69,42 +55,46 @@ const Checkout = () => {
             },
             items: infoCart,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
-            total: cartNumber(),
+            total: calcTotal(),
         };
 
         orders
             .add(newOrder)
             .then((response) => {
+                console.log("Productos a Firebase", response);
                 cart.forEach(({ item, quantity }) => {
                     const docRef = db.collection("items").doc(item.id);
                     batch.update(docRef, { stock: item.stock - quantity });
                 });
                 batch.commit();
+                setCart([]);
+                history.push(`/orden/${response.id}`);
+                setOrder(false);
             })
-            .catch((error) => console.log(error))
-            .finally(setOrder(true));
+            .catch((error) => console.log(error));
     };
 
     return (
-        <div>
-            <h4 className="tituloForma">Ingresa tus datos</h4>
-            <div className="contenedorForma">
-                <form>
+        <div className="contenedorForma">
+            <div className="forma">
+                <Form>
+                    <h2 className="tituloForma">Ingresa tus Datos</h2>
+
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label className="labels">Nombre</Form.Label>
                         <Form.Control
                             name="name"
                             type="text"
-                            placeholder="Name"
+                            placeholder="Nombre"
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicName">
+                    <Form.Group className="mb-3" controlId="formBasicLastname">
                         <Form.Label className="labels">Apellido</Form.Label>
                         <Form.Control
                             name="lastname"
                             type="text"
-                            placeholder="lastname"
+                            placeholder="Apellido"
                             onChange={handleChange}
                         />
                     </Form.Group>
@@ -128,23 +118,15 @@ const Checkout = () => {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                    {order ? (
-                        <Link to="/ItemlistContainer">
-                            <button className="btnBack">
-                                Compra Exitosa, regresar a la tienda.
-                            </button>
-                        </Link>
-                    ) : (
-                        <button
-                            disabled={required}
-                            variant="primary"
-                            onClick={handleFinishPurchase}
-                            className="btnCheckout"
-                        >
-                            Finalizar Compra{" "}
-                        </button>
-                    )}
-                </form>
+                    <Button
+                        className="btnNormal"
+                        disabled={required}
+                        variant="primary"
+                        onClick={handleFinishPurchase}
+                    >
+                        Realizar tu pedido
+                    </Button>
+                </Form>
             </div>
         </div>
     );

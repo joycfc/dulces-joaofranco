@@ -1,7 +1,17 @@
+.contenedorCard {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    width: auto;
+}
 .CardDetalle {
     height: auto;
-    width: 90%;
-    border: solid crimson 1px;
+    width: 60%;
+    border: solid #000033 1px;
     margin: 50px auto;
     border-radius: 20px;
     display: flex;
@@ -28,36 +38,20 @@
 
 .detailTitulo {
     font-size: 2.5em;
-    color: crimson;
+    color: #f99999;
     padding: 2rem;
 }
 
 .detailInfo {
     font-size: 1.5em;
-    color: rgb(34, 20, 25);
+    color: #000033;
     padding: 0.5rem;
 }
 
 .detailPrecio {
     font-size: 2em;
-    color: green;
-    padding: 0.5rem;
-}
-
-.btnTerminar {
-    height: auto;
-    width: 100%;
-    border-radius: 20px;
-    padding: 0.1rem;
-    border: none;
-    text-align: center;
-    background-color: greenyellow;
     color: crimson;
-    padding: 1rem;
-}
-
-.btnTerminar:hover{
-    background-color: yellow;
+    padding: 0.5rem;
 }
 
 .btnSeguir {
@@ -66,24 +60,36 @@
     border-radius: 20px;
     background-color: pink;
     border: none;
-    margin: 20px auto ;
+    margin: 20px auto;
     text-align: center;
     padding: 1rem;
     color: crimson;
-
 }
 
-.btnSeguir:hover{
+.btnSeguir:hover {
     color: white;
     background-color: crimson;
-
 }
 
-.cardBody{
+.cardBody {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     justify-items: center;
     align-content: center;
+}
+
+.btnTerminar {
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #f99999;
+    padding: 0.8rem;
+    margin: 0.6rem;
+}
+
+.btnTerminar:hover {
+    background-color: white;
+    color: #f99999;
 }

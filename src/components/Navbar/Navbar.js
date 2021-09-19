@@ -18,14 +18,12 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div>
+        <div className="navbar">
             <Navbar expand="lg" className="color-nav" expand="lg">
                 <Navbar.Brand translate="no">
                     <Link to="/">
                         <a className="Navbar.Brand" href="#">
                             <img
-                                width="120px"
-                                height="auto"
                                 className="img-responsive logo"
                                 src={Logo}
                                 alt="logo"
@@ -56,9 +54,6 @@ const NavBar = () => {
                                 <p className="enlacesDrop"> Regalos </p>
                             </NavDropdown.Item>
                         </NavDropdown>
-                        {/* <Nav.Link as={Link} to="/Contactos">
-                            <p className="enlaces"> Contactos </p>
-                        </Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
                 <div className="d-none d-lg-flex">

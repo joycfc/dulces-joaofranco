@@ -7,9 +7,12 @@ import ItemList from "../ItemList/ItemList";
 //* IMPORTAMOS LOS ESTILOS
 import "./ItemListContainer.css";
 
-import { listCallback } from "../../components/productos/Productos"
+import { listCallback } from "../../components/productos/Productos";
 
-import {getFirestore} from "../../firebase/index"
+import { getFirestore } from "../../firebase/index";
+
+import HeroProductos from "../HeroProductos/HeroProductos";
+import Footer from "../../components/footer/Footer"
 
 function ItemListContainer(props) {
     const [items, setItems] = useState([]);
@@ -25,14 +28,14 @@ function ItemListContainer(props) {
             });
     }, []);
 
-
     return (
         <div className="contenedorTxt">
+            <HeroProductos />
             <h2 className="itemTitulo">Nuestros Productos</h2>
             <div className="contenedorList">
-
-            <ItemList items={items} />
+                <ItemList items={items} />
             </div>
+            <Footer />
         </div>
     );
 }

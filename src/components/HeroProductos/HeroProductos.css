@@ -1,0 +1,47 @@
+.heroProductos {
+    background-image: url(../../components/Slider/slide3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.contenedorTexto {
+    width: 40%;
+    margin-left: 10rem;
+}
+
+.titulo {
+    font-size: 4.6em;
+    margin: 0.6rem;
+
+    color: #000033;
+}
+
+.subtituloProductos {
+    font-size: 4em;
+    text-align: justify;
+    color: white;
+    margin: 0.6rem;
+}
+
+.btnNormal {
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #000033;
+    padding: 0.8rem;
+    margin: 0.6rem;
+}
+
+.btnNormal:hover {
+    background-color: white;
+    color: #000033;
+}

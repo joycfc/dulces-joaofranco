@@ -3,14 +3,17 @@
 }
 
 .itemTitulo {
-    font-size: 3em;
-    color: crimson;
-    margin: 0.5rem;
+    font-size: 4em;
+    color: #000033;
+    margin: 3rem;
     padding: 0.5rem;
 }
 
-.contenedorList{
+.contenedorList {
     display: flex;
     width: 80%;
     height: auto;
+    margin-top: 5em;
+    margin-bottom: 6em;
+
 }

@@ -19,7 +19,7 @@ function Item({ title, price, image, id }) {
                 <p className="cardPrecio">${price}</p>
             </div>
             <Link to={`/item/${id}`}>
-                <Button className="nfo">info</Button>
+                <Button className="btnNormal">info</Button>
             </Link>
         </div>
     );

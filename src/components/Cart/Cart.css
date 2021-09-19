@@ -54,7 +54,7 @@ button {
 
 .btnSeguir {
     height: auto;
-    width: 100%;
+    width: 50%;
     border-radius: 20px;
     background-color: pink;
     border: none;
@@ -106,16 +106,26 @@ h4 {
 
 .btnFinalizar{
     height: auto;
-    width: 100%;
+    width: 50%;
     border-radius: 20px;
-    background-color: greenyellow;
+    background-color: #000033;
     border: none;
     margin: 20px auto;
     text-align: center;
     padding: 1rem;
+    color: white;
+    border: solid #000033 1px;
+
 }
 
 .btnFinalizar:hover {
-    color: crimson;
-    background-color: yellow;
+    color: #000033;
+    background-color: white;
+    border: solid #000033 1px;
+}
+
+.contenedorBtn{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }

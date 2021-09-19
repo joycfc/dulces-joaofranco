@@ -1,9 +1,9 @@
 .cardProductos {
     height: auto;
     width: 14rem;
-    border: solid crimson 1px;
     margin: 1rem;
     border-radius: 20px;
+    background-color: #f99999;
 }
 
 .carImagen {
@@ -16,37 +16,11 @@
 }
 
 .cardTitulo{
-    font-size: 1em;
+    font-size: 1.5em;
     color: crimson;
 }
 
 .cardPrecio{
-    font-size: 0.8em;
-    color: purple;
-}
-
-
-.nfo {
-    height: auto;
-    width: 30%;
-    border-radius: 20px;
-    padding: 0.3rem;
-    border: none!important;
-    text-align: center;
-    background-color: pink !important;
-    color: crimson;
-    margin: 0.2rem;
-
-}
-
-.add:hover{
-background-color: crimson;
-color:white;
-}
-
-.btnTxt{
-    font-size: 0.8em;
-    text-align: center;
-    padding: 0.5rem;
-    
+    font-size: 1em;
+    color: #000033;
 }

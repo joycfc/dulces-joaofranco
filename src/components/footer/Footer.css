@@ -1,0 +1,19 @@
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: #000033;
+    display: flex;    
+    justify-content: center;
+}
+
+.textoBotton {
+    padding: 0.2rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #f99999;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.contenedorTextoBotton {
+    margin: 1rem;
+}

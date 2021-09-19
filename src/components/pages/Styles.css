@@ -1,0 +1,34 @@
+.contenedorOrden {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 80vh;
+}
+
+.contenedorId {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000033;
+    border-radius: 20px;
+}
+
+.tituloCompra {
+    font-size: 3em;
+    color: white;
+    padding: 0.5rem;
+}
+
+.tituloId {
+    color: #f99999;
+}

@@ -6,6 +6,7 @@ import NavBar from "../components/Navbar/NavBar";
 import Home from "../components/pages/Home";
 import Cart from "../components/Cart/Cart";
 import Checkout from "../components/Checkout/Checkout";
+import OrderCreated from "../components/pages/OrderCreated";
 
 const Router = () => {
     return (
@@ -25,6 +26,7 @@ const Router = () => {
                 <Route path="/item/:itemId" component={ItemDetailContainer} />
                 <Route path="/Cart" component={Cart} />
                 <Route path="/Checkout" component={Checkout} />
+                <Route path="/orden/:orderId" component={OrderCreated} />
             </Switch>
         </BrowserRouter>
     );

@@ -61,6 +61,10 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const calcTotal = () => {
+        return cart.reduce((acc, el) => el.item.price * el.quantity + acc, 0);
+    };
+
     //* EXPORTAMOS LAS FUNCIONES QUE VAMOS A USAR
 
     return (
@@ -74,6 +78,7 @@ export const CartProvider = ({ children }) => {
                 total,
                 subTotal,
                 removeFromCart,
+                calcTotal,
             }}
         >
             {children}
