@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 import "./Checkout.css";
 
 const Checkout = () => {
-    const { cart, setCart, calcTotal } = useContext(CartContext);
+    const { cart, setCart, totalCount } = useContext(CartContext);
     const [customerInfo, setCustomerInfo] = useState({
         name: null,
         lastname: null,
@@ -55,7 +55,7 @@ const Checkout = () => {
             },
             items: infoCart,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
-            total: calcTotal(),
+            total: totalCount(),
         };
 
         orders

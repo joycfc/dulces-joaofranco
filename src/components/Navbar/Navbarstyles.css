@@ -49,3 +49,9 @@
     height: 10vh;
     top: 0;
 }
+
+.menuResponsive{
+    color: white;
+    text-align: center;
+    background-color: #ff9999;
+}

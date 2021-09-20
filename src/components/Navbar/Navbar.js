@@ -31,8 +31,8 @@ const NavBar = () => {
                         </a>
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse
+                <Navbar.Toggle aria-controls="navbarScroll"className=" menuResponsive" />
+                <Navbar.Collapse 
                     id="navbarScroll"
                     className="justify-content-md-center mr-auto"
                 >
@@ -55,7 +55,7 @@ const NavBar = () => {
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                </Navbar.Collapse>
+                </Navbar.Collapse >
                 <div className="d-none d-lg-flex">
                     <Link>
                         <CartWidget />
